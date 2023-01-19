@@ -1,0 +1,121 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "EmergenceResponse.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "EmergenceResponse.Lib": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EmergenceResponse.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmergenceResponse.Data.dll": {}
+        }
+      },
+      "EmergenceResponse.Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/EmergenceResponse.Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmergenceResponse.Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmergenceResponse.Data/1.0.0": {
+      "type": "project",
+      "path": "../EmergenceResponse.Data/EmergenceResponse.Data.csproj",
+      "msbuildProject": "../EmergenceResponse.Data/EmergenceResponse.Data.csproj"
+    },
+    "EmergenceResponse.Lib/1.0.0": {
+      "type": "project",
+      "path": "../EmergenceResponse.Lib/EmergenceResponse.Lib.csproj",
+      "msbuildProject": "../EmergenceResponse.Lib/EmergenceResponse.Lib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "EmergenceResponse.Data >= 1.0.0",
+      "EmergenceResponse.Lib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Windows Pc\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Windows Pc\\source\\repos\\EmergenceResponse\\EmergenceResponse.Web\\EmergenceResponse.Web.csproj",
+      "projectName": "EmergenceResponse.Web",
+      "projectPath": "C:\\Users\\Windows Pc\\source\\repos\\EmergenceResponse\\EmergenceResponse.Web\\EmergenceResponse.Web.csproj",
+      "packagesPath": "C:\\Users\\Windows Pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Windows Pc\\source\\repos\\EmergenceResponse\\EmergenceResponse.Web\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Windows Pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://wcyber.pkgs.visualstudio.com/_packaging/wCyberServices/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\Windows Pc\\source\\repos\\EmergenceResponse\\EmergenceResponse.Data\\EmergenceResponse.Data.csproj": {
+              "projectPath": "C:\\Users\\Windows Pc\\source\\repos\\EmergenceResponse\\EmergenceResponse.Data\\EmergenceResponse.Data.csproj"
+            },
+            "C:\\Users\\Windows Pc\\source\\repos\\EmergenceResponse\\EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj": {
+              "projectPath": "C:\\Users\\Windows Pc\\source\\repos\\EmergenceResponse\\EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

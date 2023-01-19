@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "EmergenceResponse.Web/1.0.0": {
+        "dependencies": {
+          "EmergenceResponse.Data": "1.0.0",
+          "EmergenceResponse.Lib": "1.0.0"
+        },
+        "runtime": {
+          "EmergenceResponse.Web.dll": {}
+        }
+      },
+      "EmergenceResponse.Data/1.0.0": {
+        "dependencies": {
+          "EmergenceResponse.Lib": "1.0.0"
+        },
+        "runtime": {
+          "EmergenceResponse.Data.dll": {}
+        }
+      },
+      "EmergenceResponse.Lib/1.0.0": {
+        "runtime": {
+          "EmergenceResponse.Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmergenceResponse.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmergenceResponse.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmergenceResponse.Lib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
