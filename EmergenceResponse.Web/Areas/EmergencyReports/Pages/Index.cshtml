@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@section breadcrumb {
+    <a class="breadcrumb-item" asp-page=".">Emergencies</a>
+    
+}
+
+<h3>@Model.List.Count Emergences Reported</h3>
+<table class="table">
+    <tr>
+        <th>Date</th>
+        <th>Created by</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Service provider</th>
+    </tr>
+    @foreach(var item in @Model.List)
+    {
+        <tr>
+            <td>@item.CreationDate</td>
+            <td>@item.Creator.Name</td>
+            <td>@item.Type</td>
+            <td>@item.Description</td>
+            <td>@item.Status</td>
+            <td>@item.ServiceProvider?.Name</td>
+        </tr>       
+    }
+                           
+                   
+</table>
