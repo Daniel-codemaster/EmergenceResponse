@@ -21,6 +21,8 @@ public partial class Emergency
 
     public Guid? ServiceProviderId { get; set; }
 
+    public DateTime? ApprovalDate { get; set; }
+
     public virtual Member Creator { get; set; }
 
     public virtual Location Location { get; set; }

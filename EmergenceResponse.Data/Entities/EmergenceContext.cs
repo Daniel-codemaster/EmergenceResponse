@@ -38,6 +38,7 @@ public partial class EmergenceContext : DbContext
             entity.ToTable("Emergency");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.Property(e => e.ApprovalDate).HasColumnType("timestamp without time zone");
             entity.Property(e => e.CreationDate).HasColumnType("timestamp without time zone");
 
             entity.HasOne(d => d.Creator).WithMany(p => p.Emergencies)

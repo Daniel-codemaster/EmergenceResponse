@@ -18,7 +18,7 @@
     @foreach(var item in @Model.List)
     {
         <tr>
-            <td>@item.CreationDate</td>
+            <td><a asp-page="Details" asp-route-id="@item.Id">@item.CreationDate</a></td>
             <td>@item.Creator.Name</td>
             <td>@item.Type</td>
             <td>@item.Description</td>

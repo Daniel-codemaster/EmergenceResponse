@@ -1,0 +1,71 @@
+﻿@page "{id}"
+@model DetailsModel
+
+@section breadcrumb {
+    <a class="breadcrumb-item" asp-page="Index">Emergency</a>
+}
+@section action{
+    
+    <div class="d-flex">   
+        @if(Model.Emergency.StatusId == (int)EmergencyStatus.ASSIGNED)
+        {
+         <form method="post">
+             <button class="ms-2 btn btn-success" asp-page="Details" asp-page-handler="Approve" asp-route-id="@Model.Emergency.Id"><i class="fa-solid fa-check"></i> Approve</button>
+        </form>   
+        }
+        
+       
+    </div>    
+}
+
+    <div class="row">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-body">
+                
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Description</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Emergency.Description</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Creator</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Emergency.Creator.Name</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Status</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Emergency.Status.ToEnumString()</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Service provider</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Emergency.ServiceProvider.Name</div></div>
+                </div>  
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Address</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Emergency.Location.Address</div></div>
+                </div> 
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Latitude</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Emergency.Location.Latitude</div></div>
+                    
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Longitude</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Emergency.Location.Longitude</div></div>
+                    
+                </div>
+            </div>
+            <div class="card-footer small text-muted">
+                <div class="">Creation date</div>
+                <div class="">@Model.Emergency.CreationDate</div>
+            </div>
+        </div> 
+        
+    </div>
+</div>
+
+
+@section sidebar{
+
+}
+
+
