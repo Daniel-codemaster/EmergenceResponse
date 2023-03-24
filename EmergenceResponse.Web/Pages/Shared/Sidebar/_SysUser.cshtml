@@ -8,6 +8,19 @@
      <!-- Emergences -->
         <li>
             <div class="sidebar-menu">
+                <a asp-area="" asp-page="/Index">
+                    <div class="sidebar-items-positioning">
+                        <span class="iconspace"><i class="fa-solid fa-chart-line"></i></span>
+                        <span class="menu-collapsed">Dashboard</span>
+                    </div>
+                </a>
+            </div>
+
+        </li>
+
+     <!-- Emergences -->
+        <li>
+            <div class="sidebar-menu">
                 <a asp-area="EmergencyReports" asp-page="/Index">
                     <div class="sidebar-items-positioning">
                         <span class="iconspace"><i class="fa-solid fa-tower-broadcast"></i></span>
@@ -40,19 +53,6 @@
                 </a>
             </div>
         </li>
-       
-        <!-- Claims -->
-        <li>
-            <div class="sidebar-menu">
-                <a asp-area="Claims" asp-page="/Index">
-                    <div class="sidebar-items-positioning">
-                        <span class="iconspace"><i class="fa-solid fa-location-crosshairs"></i></span>
-                        <span class="menu-collapsed">Locations</span>
-                    </div>
-                </a>
-            </div>
-
-        </li>
  
  
         <li>
@@ -60,7 +60,7 @@
                 <a href="#submenuconfig" data-toggle="collapse" aria-expanded="false" class="dropdown-button">
                     <div class="sidebar-items-positioning">
                         <span class="iconspace"><i class="fas fa-cogs"></i></span>
-                        <span class="menu-collapsed">Config</span>
+                        <span class="menu-collapsed">Settings</span>
                         <span class="submenu-icon "></span>
                     </div>
                 </a>

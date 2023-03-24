@@ -22,6 +22,21 @@ namespace EmergenceResponse.Data
             get => (EmergencyType)TypeId;
             set => TypeId = (int)value;
         }
+        public string ResponceTime {
+            get
+            {
+                if (ApprovalDate == null)
+                    return "";
+                var timedif = ApprovalDate - CreationDate;
+
+                var timestring = "";
+                timestring += timedif.Value.Days == 0 ? "" : timedif.Value.Days.ToString() + "days ";
+                timestring += timedif.Value.Hours == 0 ? "" : timedif.Value.Hours.ToString() + "hrs ";
+                timestring += timedif.Value.Minutes.ToString() + "min";
+
+                return timestring;
+            }
+        }
 
     }
 }

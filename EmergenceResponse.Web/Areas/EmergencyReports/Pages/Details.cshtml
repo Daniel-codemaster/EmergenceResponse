@@ -12,9 +12,7 @@
          <form method="post">
              <button class="ms-2 btn btn-success" asp-page="Details" asp-page-handler="Approve" asp-route-id="@Model.Emergency.Id"><i class="fa-solid fa-check"></i> Approve</button>
         </form>   
-        }
-        
-       
+        }     
     </div>    
 }
 
@@ -53,6 +51,14 @@
                     <div class="col-md-9"><div class="label-value">@Model.Emergency.Location.Longitude</div></div>
                     
                 </div>
+                @if(Model.Emergency.StatusId == (int)EmergencyStatus.ASSIGNMENT_APPROVED || Model.Emergency.StatusId == (int)EmergencyStatus.COMPLETED)
+                {
+                    <div class="row mb-3">
+                        <label class="col-md-3 text-muted">Response time</label>
+                        <div class="col-md-9"><div class="label-value">@Model.Emergency.ResponceTime</div></div>
+                    
+                    </div>
+                }
             </div>
             <div class="card-footer small text-muted">
                 <div class="">Creation date</div>
