@@ -3,6 +3,7 @@
 
 @section breadcrumb {
     <a class="breadcrumb-item" asp-page="Index">Emergency</a>
+    <a class="breadcrumb-item" asp-page=".">@Model.Emergency.CreationDate</a>
 }
 @section action{
     
@@ -12,7 +13,11 @@
          <form method="post">
              <button class="ms-2 btn btn-success" asp-page="Details" asp-page-handler="Approve" asp-route-id="@Model.Emergency.Id"><i class="fa-solid fa-check"></i> Approve</button>
         </form>   
-        }     
+        }    
+        @if(Model.CurrentUser.ServiceProviderId != null)
+        {
+            <a class="btn btn-primary" asp-page="Direction" asp-route-id="@Model.Emergency.Id"><i class="fa-solid fa-diamond-turn-right"></i> Get directions</a>
+        }    
     </div>    
 }
 

@@ -43,7 +43,7 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
        
         public async Task<Data.ServiceProvider> GetDistance(Location origin, Emergency em)
         {
-            var apiKey = "";
+            var apiKey = "AIzaSyCREgmLx8wio6hKOv4_CjGQr2arYeEWnNg";
             var dests = Db.ServiceProviders.Include(c => c.Location).Where(c => c.TypeId == em.TypeId).ToList();
 
             var distances = new List<double>();

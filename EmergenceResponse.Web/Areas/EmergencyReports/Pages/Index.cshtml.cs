@@ -13,11 +13,18 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
         {
             var query = Db.Emergencies.Include(c => c.Creator).Include(c => c.ServiceProvider).AsQueryable();
 
+            if(CurrentUser.MemberId != null)
+            {
+                query = query.Where(c => c.CreatorId == CurrentUser.MemberId);
+            }
+
             if(spId != null)
             {
                 query = query.Where(c => c.ServiceProviderId == spId);
             }
             List = query.OrderByDescending(c => c.CreationDate).ToPagedList(p ?? 1, ps ?? DefaultPageSize);
+
+            PageTitle = $"{List.Count} Emergence{ (List.Count==1 ? "" : "s")} Reported";
         }
     }
 }
